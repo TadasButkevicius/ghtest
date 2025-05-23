@@ -1,0 +1,31 @@
+name: "I like turtles ${ github.event_name }"
+on: 
+ workflow_dispatch:
+  inputs:
+    environment:
+      description: 'Environment to deploy to'
+      type: environment
+      required: true
+
+jobs:
+  something:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 'do ls'
+        run: 'ls -a'
+
+      - name: 'do pwd'
+        run: 'pwd'
+
+      - name: Run inline Python
+        run: |
+          import sys
+          print("Hello from Python!")
+          sys.exit(0)
+        shell: python
+  
+
+
+
+
