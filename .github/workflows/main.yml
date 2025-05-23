@@ -10,19 +10,19 @@ on:
 jobs:
   Build:
    runs-on: ubuntu-latest
-    steps:
-      - name: 'do ls'
-        run: 'ls -a'
+   steps:
+     - name: 'do ls'
+       run: 'ls -a'
 
-      - name: 'do pwd'
-        run: 'pwd'
+     - name: 'do pwd'
+       run: 'pwd'
 
-      - name: Run inline Python
-        run: |
-          import sys
-          print("Hello from Python!")
-          sys.exit(0)
-        shell: python
+     - name: Run inline Python
+       run: |
+         import sys
+         print("Hello from Python!")
+         sys.exit(0)
+       shell: python
 
   Test:
    runs-on: ubuntu-latest
